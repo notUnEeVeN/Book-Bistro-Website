@@ -1,1 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.bookshelf-section {
+    background: rgb(121,187,40);
+    background: linear-gradient(306deg, rgba(121,187,40,1) 0%, rgba(6,108,55,1) 100%);
+}
+
+.card-img {
+    height: auto;
+    width: 40%;
+}
+
+.card-width {
+    width: 100%;
+}
+
+.card-top-height {
+    height: auto;
+} 
+
+.card-description {
+    height: 49%;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden; 
+    width: 100%;
+}
+
+.description-text {
+}
+
+
+@media screen and (min-width: 700px) {
+    .card-width {
+        width: 45%;
+    }
+
+    .card-img {
+        height: auto;
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .card-width {
+        width: 30%;
+    }
+}
 
