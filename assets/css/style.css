@@ -4,6 +4,10 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 .bookshelf-section {
     background: linear-gradient(306deg, rgba(121,187,40,1) 0%, rgba(6,108,55,1) 100%);
 }

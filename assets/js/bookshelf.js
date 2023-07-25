@@ -1,5 +1,5 @@
 const bookshelfEl = document.getElementById('bookshelf-section')
-
+const logoEl = document.getElementById('logo');
 const title = 'Some title idk';
 const genre = 'Fantasy';
 const author = 'Some Author';
@@ -34,3 +34,7 @@ function truncateString(str, length) {
 	if (str.length > length) return str.slice(0, length) + '...';
 	return str;
 };
+
+logoEl.addEventListener('click', function() {
+    location.replace('index.html');
+})
