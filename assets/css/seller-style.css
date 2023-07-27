@@ -46,6 +46,11 @@
          margin: 10px;
      }
  }
+
+ .logo:hover {
+    cursor: pointer;
+}
+
  .book .book-title {
      font-size: 20px;
      font-weight: bolder;

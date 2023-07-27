@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('book-description').innerText = book.description;
         document.getElementById('book-publisher').innerText = book.publisher;
         document.getElementById('book-publish-date').innerText = book.publishedDate;
-        document.getElementById('book-isbn').innerText = 'ISBN: ' + book.industryIdentifiers[0].identifier;
+        document.getElementById('book-isbn').innerText = book.industryIdentifiers[0].identifier;
         document.getElementById('book-cover').src = book.imageLinks.thumbnail;
       }
     })
@@ -49,3 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
     window.location.href = 'index.html';
   });
 });
+
+const logoEl = document.getElementById('logo');
+
+logoEl.addEventListener('click', function() {
+  location.replace('index.html');
+})
