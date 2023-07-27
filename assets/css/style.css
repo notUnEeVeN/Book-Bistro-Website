@@ -2,6 +2,10 @@
     cursor: pointer;
 }
 
+.flex-nav {
+  display: flex;
+}
+
 
 .book-title:hover {
     text-decoration: underline;
