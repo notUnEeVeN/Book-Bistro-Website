@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bookshelf</title>
+    <title>NewYork Best Sellers</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <link href = './assets/css/bookshelf-style.css' rel = 'stylesheet'>
+    <link rel="stylesheet" href="./assets/css/seller-style.css">
 </head>
 <body>
     <nav class="px-6 py-2 bg-white flex justify-between items-center shadow">
@@ -29,32 +29,31 @@
         </div>
     </nav>
 
-
-    <section>
+    <header>
         <div>
-            <div class = 'saved-books-section w-full text-xl font-bold p-6 bg-gray-200'>
-                <h2>Saved Books 📚</h2>
-            </div>
-            
-            <div class="bookshelf-section flex justify-baseline py-4 px-4 flex-wrap" id = 'bookshelf-section'>       
-                
-            </div>
+            <h1>Best Sellers From New York Times</h1>
+        </div>
+    </header>
+    <section class="category" id="hardcover-fiction">
+        <h2>Hardcover Fiction</h2>
+        <div class="bookshelf" id="bookshelf-hardcover-fiction">
         </div>
     </section>
-
-    <section>
-        <div>
-            <div class = 'saved-books-section w-full text-xl font-bold p-6 bg-gray-200'>
-                <h2>My Wishlist ✨</h2>
-            </div>
-            
-            <div class="bookshelf-section flex justify-baseline py-10 px-4 flex-wrap" id = 'wishlist'>
-
-            </div>
+    <section class="category" id="hardcover-nonfiction">
+        <h2>Hardcover Nonfiction</h2>
+        <div class="bookshelf" id="bookshelf-hardcover-nonfiction">
         </div>
     </section>
-
-    <script src = './assets/js/bookshelf.js'>
-    </script>
+    <section class="category" id="trade-fiction-paperback">
+        <h2>Trade Fiction Paperback</h2>
+        <div class="bookshelf" id="bookshelf-trade-fiction-paperback">
+        </div>
+    </section>
+<section class="category" id="paperback-nonfiction">
+        <h2>Paperback Nonfiction</h2>
+        <div class="bookshelf" id="bookshelf-paperback-nonfiction">
+        </div>
+    </section>
+    <script src="./assets/js/best-sellers.js"></script>
 </body>
 </html>

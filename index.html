@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Bistro</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <link href = './assets/css/style2.css' rel = 'stylesheet'>
+    <link href = './assets/css/style.css' rel = 'stylesheet'>
 </head>
 <body>
-    <nav class="p-6 bg-white flex justify-between items-center shadow">
-        <div class="text-2xl font-bold">Book Bistro</div>
+    <nav class="px-6 py-2 bg-white flex justify-between items-center shadow">
+        <img class="w-1/3 md:w-1/4 lg:w-1/6 logo" src = './assets/images/logo.png' id = 'logo'>
 
         <div class="flex-1 px-4">
             <div class="relative">
@@ -18,16 +18,17 @@
                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                     </svg>
                 </span>
-                <input class="pl-10 pr-4 rounded-lg border focus:border-blue-500 outline-none searchbar" placeholder="Search...">
+                <input class="pl-10 pr-4 rounded-lg border focus:border-blue-500 outline-none" placeholder="Search...">
             </div>
         </div>
 
         <div class="flex space-x-4">
             <a href="" class="text-gray-500 hover:text-blue-500">Top Sellers</a>
             <a href="saved-books.html" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
-            <a href="" class="text-gray-500 hover:text-blue-500">Your Recommendations</a>
+            <a href="" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
         </div>
     </nav>
+
 <!--my bookshelf-->
 <div class="p-6 bg-gray-200">
     <h2 class="text-2xl font-bold mb-4">
