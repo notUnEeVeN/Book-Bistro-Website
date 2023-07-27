@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+  const logoEl = document.getElementById('logo');
+  logoEl.addEventListener('click', function() {
+    location.replace('index.html');
+  })
+
   fetch('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=LqqbGFHS6JRg2YspUp9AD06ugQlFrIRb')
   .then(response => response.json())
   .then(data => {
