@@ -2,6 +2,10 @@
     cursor: pointer;
 }
 
+<<<<<<< HEAD:assets/css/style.css
+.flex-nav {
+  display: flex;
+=======
 .logo:hover {
   cursor: pointer;
 }
@@ -10,6 +14,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+>>>>>>> 1472afad6bffbe1b030a76fccf735b69dc75b994:assets/css/homepage.css
 }
 
 
