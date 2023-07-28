@@ -22,7 +22,8 @@
             </div>
         </div>
 
-        <div class="flex space-x-4">
+
+        <div class="flex-nav space-x-4">
             <a href="best-sellers.html" class="text-gray-500 hover:text-blue-500">Top Sellers</a>
             <a href="saved-books.html" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
             <a href="" class="text-gray-500 hover:text-blue-500">Your Recommendations</a>
@@ -35,46 +36,76 @@
         <a href="saved-books.html" class="no-underline text-inherit">My Bookshelf</a>
     </h2>
     <div class="grid grid-cols-3 gap-4">
-        <div class="bg-white p-4 rounded shadow flex flex-col">
+        <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
-                <div class="book-cover-wrapper">
-                    <img id="book1-cover" class="book-cover">
+                <div class="book-cover">
+                    <img id="book1-cover" class="book-cover container">
                   </div>
                 <div class="px-2 pl-6">
                     <h3 class="text-xl font-semibold mb-2 book-title" id="book1-title"></h3>
                     <p class="text-black-700" id="book1-author"></p>
                     <p class="text-gray-700 mt-2" id="book1-description"></p>
+                    <div class="rating" id="book1-rating">
+                        <select class="book1-rating mt-1">
+                            <option disabled selected value>Rate this book</option>
+                            <option value="1">★</option>
+                            <option value="2">★★</option>
+                            <option value="3">★★★</option>
+                            <option value="4">★★★★</option>
+                            <option value="5">★★★★★</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <button class="mt-5 px-4 py-2 bg-green-500 text-white rounded remove-button">Remove from bookshelf</button>
+            <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded remove-button">Remove from bookshelf</button>
         </div>
-        <div class="bg-white p-4 rounded shadow flex flex-col">
+        <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
-                <div class="ml-4 flex grow book-cover-wrapper">
-                    <img id="book2-cover" style="width:100%; height:auto;">
+                <div class="ml-4 flex grow book-cover">
+                    <img id="book2-cover" class="book-cover container" style="width:100%; height:auto;">
                 </div>
                 <div class="px-2 pl-6">
                     <h3 class="text-xl font-semibold mb-2 book-title" id="book2-title"></h3>
                     <p class="text-black-700" id="book2-author"></p>
                     <p class="text-gray-700 mt-2" id="book2-description"></p>
                     <p class="text-sm text-gray-600" id="book2-author"></p>
+                    <div class="rating" id="book1-rating">
+                        <select class="book2-rating mt-1">
+                            <option disabled selected value>Rate this book</option>
+                            <option value="1">★</option>
+                            <option value="2">★★</option>
+                            <option value="3">★★★</option>
+                            <option value="4">★★★★</option>
+                            <option value="5">★★★★★</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <button class="mt-5 px-4 py-2 bg-green-500 text-white rounded remove-button">Remove from bookshelf</button>
+            <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded remove-button">Remove from bookshelf</button>
         </div>
-        <div class="bg-white p-4 rounded shadow flex flex-col">
+        <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
-                <div class="ml-4 flex grow book-cover-wrapper">
-                    <img id="book3-cover" style="width:100%; height:auto;" class="pb-6">
+                <div class="ml-4 flex grow book-cover">
+                    <img id="book3-cover" style="width:100%; height:auto;" class="pb-6 container">
                 </div>
                 <div class="px-2 pl-6">
                     <h3 class="text-xl font-semibold mb-2 book-title" id="book3-title"></h3>
                     <p class="text-black-700" id="book3-author"></p>
                     <p class="text-gray-700 mt-2" id="book3-description"></p>
                     <p class="text-sm text-gray-600" id="book3-author"></p>
+                    <div class="rating" id="book3-rating">
+                        <select class="book3-rating mt-1">
+                            <option disabled selected value>Rate this book</option>
+                            <option value="1">★</option>
+                            <option value="2">★★</option>
+                            <option value="3">★★★</option>
+                            <option value="4">★★★★</option>
+                            <option value="5">★★★★★</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <button class="mt-5 px-4 py-2 bg-green-500 text-white rounded remove-button">Remove from bookshelf</button>
+            <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded remove-button">Remove from bookshelf</button>
         </div>
     </div>
 </div>
@@ -84,10 +115,10 @@
         <a href="best-sellers.html" class="no-underline text-inherit">Top Sellers</a>
     </h2>
     <div class="grid grid-cols-3 gap-4">
-        <div class="bg-white p-4 rounded shadow flex flex-col">
+        <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
                 <div class="book-cover-wrapper">
-                    <img id="topbook1-cover" style="width:100%; height:auto;">
+                    <img id="topbook1-cover" style="width:100%; height:auto;" class="book-cover container">
                 </div>
                 <div class="px-2 pl-6">
                     <h3 class="text-xl font-semibold mb-2 book-title" id="topbook1-title"></h3>
@@ -97,10 +128,10 @@
             </div>
             <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded add-button">Add to Bookshelf</button>
         </div>
-        <div class="bg-white p-4 rounded shadow flex flex-col">
+        <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
                 <div class="book-cover-wrapper">
-                    <img id="topbook2-cover" style="width:100%; height:auto;">
+                    <img id="topbook2-cover" style="width:100%; height:auto;" class="book-cover container">
                 </div>
                 <div class="px-2 pl-6">
                     <h3 class="text-xl font-semibold mb-2 book-title" id="topbook2-title"></h3>
@@ -111,10 +142,10 @@
             </div>
             <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded add-button">Add to Bookshelf</button>
         </div>
-        <div class="bg-white p-4 rounded shadow flex flex-col">
+        <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
                 <div class="book-cover-wrapper">
-                    <img id="topbook3-cover" style="width:100%; height:auto;" class="pb-6">
+                    <img id="topbook3-cover" style="width:100%; height:auto;" class="book-cover container">
                 </div>
                 <div class="px-2 pl-6">
                     <h3 class="text-xl font-semibold mb-2 book-title" id="topbook3-title"></h3>
@@ -123,7 +154,7 @@
                     <p class="text-sm text-gray-600" id="topbook3-author"></p>
                 </div>
             </div>
-            <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded add-button">Add to Bookshelf</button>
+            <button class="mt-10 px-4 py-2 bg-green-500 text-white rounded add-button">Add to Bookshelf</button>
         </div>
     </div>
 </div>
@@ -131,7 +162,7 @@
 <div class="p-6 bg-gray-200">
     <h2 class="text-2xl font-bold mb-4">Recommended Books</h2>
     <div class="grid grid-cols-3 gap-4">
-        <div class="bg-white p-4 rounded shadow flex flex-col">
+        <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
                 <div class="ml-4 flex grow">
                     <img id="recbook1-cover" style="width:100%; height:auto;">
@@ -145,7 +176,7 @@
             </div>
             <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded">Add to Bookshelf</button>
         </div>
-        <div class="bg-white p-4 rounded shadow flex flex-col">
+        <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
                 <div class="ml-4 flex grow">
                     <img id="recbook2-cover" style="width:100%; height:auto;">
@@ -159,7 +190,7 @@
             </div>
             <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded">Add to Bookshelf</button>
         </div>
-        <div class="bg-white p-4 rounded shadow flex flex-col">
+        <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
                 <div class="ml-4 flex grow">
                     <img id="recbook3-cover" style="width:100%; height:auto;" class="pb-6">

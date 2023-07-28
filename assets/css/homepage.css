@@ -2,21 +2,21 @@
     cursor: pointer;
 }
 
-<<<<<<< HEAD:assets/css/style.css
-.flex-nav {
-  display: flex;
-=======
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  border-radius: 15px;
+}
 .logo:hover {
   cursor: pointer;
 }
 
 .book-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
->>>>>>> 1472afad6bffbe1b030a76fccf735b69dc75b994:assets/css/homepage.css
+  width: 100%;
+  height: 100%;
 }
-
 
 .book-title:hover {
     text-decoration: underline;
@@ -30,17 +30,6 @@
   
   .btb-btn {
     width: 167px;
-  }
-
-  .book-cover-wrapper {
-    width: 100%; /* adjust this to change the width */
-    height: 100%; /* adjust this to change the height */
-  }
-  
-  .book-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* this makes the image cover the div without distorting */
   }
 
 @media (min-width: 768px) { /* Desktop and tablet styles */
@@ -61,11 +50,6 @@
       height: 80%; /* Adjust this value as necessary */
       margin-bottom: auto; /* Pushes the button to the bottom of the div */
     }
-  
-    .remove-button {
-      width: 100%;
-      height: 50px; /* Adjust this value as necessary */
-    }
   }
   
   @media (max-width: 767px) { /* Mobile styles */
@@ -78,10 +62,6 @@
     .grid > div {
       height: auto;
     }
-  
-    .remove-button {
-      width: 100%;
-      height: 50px; /* Adjust this value as necessary */
-    }
+
   }
   
