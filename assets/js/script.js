@@ -117,5 +117,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
 
+  window.onload = function() {
+    for (let i = 1; i <= 3; i++) {
+        let bookRating = localStorage.getItem(`book${i}-rating`);
+        
+        if (bookRating !== null) {
+            document.querySelector(`.book${i}-rating`).value = bookRating;
+        }
+
+        document.querySelector(`.book${i}-rating`).addEventListener('change', function() {
+            localStorage.setItem(`book${i}-rating`, this.value);
+        });
+    }
+
+    document.querySelectorAll('.remove-button').forEach((button, index) => {
+        button.addEventListener('click', function() {
+            this.parentNode.style.display = 'none';
+            localStorage.removeItem(`book${index + 1}-rating`);
+        });
+    });
+}
+
 
 });

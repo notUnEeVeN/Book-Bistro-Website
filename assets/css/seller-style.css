@@ -1,6 +1,9 @@
 :root {
     --pop: #F5F5F5;
  }
+
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
  body {
      font-family: Arial, sans-serif;
      margin: 0;
@@ -40,12 +43,14 @@
      margin: 10px;
      padding: 10px;
      text-align: center;
+     
  .book_img {
          max-width:150px;
          height: auto;
          margin: 10px;
      }
  }
+
 
  .logo:hover {
     cursor: pointer;

@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let myBookshelf = JSON.parse(localStorage.getItem('myBookshelf')) || [];
     myBookshelf.push(book);
     localStorage.setItem('myBookshelf', JSON.stringify(myBookshelf));
-    window.location.href = 'index.html';
+    window.location.href = 'saved-books.html';
   });
 });
 
