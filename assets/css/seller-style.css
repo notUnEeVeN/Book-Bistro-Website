@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
 :root {
     --pop: #F5F5F5;
  }
@@ -5,11 +11,19 @@
  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
  body {
-     font-family: Arial, sans-serif;
      margin: 0;
      padding: 0;
-     background-color: wheat;
  }
+
+ .section-header {
+    background-color: rgb(229, 231, 235);
+ }
+
+ .card-img {
+    height: 350px;
+    width: 100%;
+}
+
  header {
      text-align: center;
      background-color: #4F3636;
@@ -20,36 +34,42 @@
      border: 5px solid var(--pop);
  }
  .category {
-     margin-left: 40px;
      max-width: 2000px;
+     background: linear-gradient(306deg, rgba(121,187,40,1) 0%, rgba(6,108,55,1) 100%);
  }
  .category h2 {
      text-align: left;
      font-size: 24px;
-     margin-bottom: 20px;
      padding: 10px;
      border: 5px solid var(--pop);
  }
  .bookshelf {
-     display: flex;
      overflow-x: auto;
+     white-space: nowrap; 
      scrollbar-width: none;
      -ms-overflow-style: none;
-     flex-wrap: nowrap;
-     justify-content: flex-start;
+     padding: 10px;
  }
  .book {
-     display: inline-block;
+    display: inline-block;
      margin: 10px;
      padding: 10px;
      text-align: center;
-     
- .book_img {
-         max-width:150px;
-         height: auto;
-         margin: 10px;
-     }
+
+     background-color: rgb(229, 231, 235);
+     border-radius: 15px;
+     width: 250px;
+     height: 100%;
  }
+
+ .book-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: space-between;
+ }
+
 
 
  .logo:hover {
@@ -57,15 +77,17 @@
 }
 
  .book .book-title {
-     font-size: 20px;
+     font-size: 16px;
      font-weight: bolder;
-     margin-bottom: 30px;
-     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     width: 100%;
+    white-space: normal;
  }
+
  .book .book-author {
-     font-size: 20px;
+     font-size: 14px;
      font-weight: bolder;
      color: #666;
+     white-space: normal;
  }
  @media (hover: hover) {
      .bookshelf:hover {
