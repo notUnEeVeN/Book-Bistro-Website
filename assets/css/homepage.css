@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
 .book-title {
     cursor: pointer;
 }
@@ -8,13 +14,22 @@
 
 .container {
   border-radius: 15px;
+  height: 100%;
 }
 .logo:hover {
   cursor: pointer;
 }
 
+.home-section {
+  background: linear-gradient(306deg, rgba(121,187,40,1) 0%, rgba(6,108,55,1) 100%);
+}
+
+.text-section {
+  width: 70%;
+}
+
 .book-cover {
-  width: 100%;
+  width: 30%;
   height: 100%;
 }
 
