@@ -5,14 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Details</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style2.css">
+  <link rel="stylesheet" href="./assets/css/book-details.css">
 </head>
 <body>
+  <nav class="px-6 py-2 bg-white flex justify-between items-center shadow">
+    <img class="w-1/3 md:w-1/4 lg:w-1/6 logo" src = './assets/images/logo.png' id = 'logo'>
+
+    <div class="flex-1 px-4">
+        <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                <svg class="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                </svg>
+            </span>
+            <input class="pl-10 pr-4 rounded-lg border focus:border-blue-500 outline-none" placeholder="Search...">
+        </div>
+    </div>
+
+    <div class="flex space-x-4">
+        <a href="" class="text-gray-500 hover:text-blue-500">Top Sellers</a>
+        <a href="saved-books.html" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
+        <a href="" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
+    </div>
+</nav>
   <div class="p-6 bg-gray-200">
     <h2 class="text-2xl font-bold mb-4" id="book-title">Book Title</h2>
     <div class="flex">
       <div class="w-1/4 bg-white p-4 rounded shadow">
-        <img id="book-cover" style="width:100%; height:auto;" alt="book cover">
+        <img id="book-cover" alt="book cover">
       </div>
       <div class="w-3/4 bg-white p-4 rounded shadow">
         <p><strong class="text-black">Author:</strong> <span class="text-black-700" id="book-author"></span></p>
@@ -21,7 +41,7 @@
         <p><strong class="text-black">Publish Date:</strong> <span class="text-gray-700 mt-2" id="book-publish-date"></span></p>
         <p><strong class="text-black-700 mb-50 pb-5">ISBN:</strong> <span class="text-gray-700 mt-2" id="book-isbn"></span></p>
         <div class="button-container">
-          <a href="index.html" class="px-4 mt-5 py-2 bg-green-500 text-white rounded btb-btn">Back to Homepage</a>
+          <a href="index.html" class="px-4 mr-1 mt-5 py-2 bg-green-500 text-white rounded btb-btn">Back to Homepage</a>
           <a href="#" class="px-4 mt-5 py-2 bg-green-500 text-white rounded btb-btn add-to-bookshelf">Add to Bookshelf</a>
       </div>    
     </div>

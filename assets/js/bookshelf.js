@@ -70,7 +70,6 @@ const searchInput = document.querySelector('.searchbar');
 
   searchInput.addEventListener('keypress', function(event) {
     // Check if the Enter key is pressed (key code 13)
-    
     if (event.key === 'Enter') {
       // Get the value of the search bar input
       const searchQuery = searchInput.value;
@@ -82,5 +81,3 @@ const searchInput = document.querySelector('.searchbar');
       window.location.href = url;
     }
   });
-
-
