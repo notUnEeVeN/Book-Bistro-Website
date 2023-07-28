@@ -55,3 +55,20 @@ const logoEl = document.getElementById('logo');
 logoEl.addEventListener('click', function() {
   location.replace('index.html');
 })
+
+
+const searchInput = document.querySelector('.searchbar');
+
+  searchInput.addEventListener('keypress', function(event) {
+    // Check if the Enter key is pressed (key code 13)
+    if (event.key === 'Enter') {
+      // Get the value of the search bar input
+      const searchQuery = searchInput.value;
+
+      // Construct the URL for the book-details.html page with the search query as a parameter
+      const url = `book-details.html?title=${encodeURIComponent(searchQuery)}`;
+
+      // Redirect the user to the book-details.html page with the constructed URL
+      window.location.href = url;
+    }
+  });

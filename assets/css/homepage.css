@@ -30,6 +30,9 @@
   .book-cover-wrapper {
     width: 100%; /* adjust this to change the width */
     height: 100%; /* adjust this to change the height */
+    background-color: transparent;
+    border: none;
+    outline: none;
   }
   
   .book-cover {
