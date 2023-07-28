@@ -53,7 +53,6 @@ function paintBookshelf() {
 }
 
 const bookTitles = document.querySelectorAll('.book-title');
-console.log(bookTitles);
 
   bookTitles.forEach(bookTitle => {
     bookTitle.addEventListener('click', function(event) {
