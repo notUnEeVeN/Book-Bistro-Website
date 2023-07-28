@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('book-publish-date').innerText = book.publishedDate;
         document.getElementById('book-isbn').innerText = book.industryIdentifiers[0].identifier;
         document.getElementById('book-cover').src = book.imageLinks.thumbnail;
+        document.getElementById('book-category').innerText = book.categories.join(', '); // Add this line to display book category
       }
     })
     .catch(error => console.error('Error:', error));
@@ -34,13 +35,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const bookTitle = document.querySelector('#book-title').textContent;
     const bookAuthor = document.querySelector('#book-author').textContent;
     const bookCover = document.querySelector('#book-cover').src;
+    const bookCategory = document.querySelector('#book-category').textContent;
 
     // Construct the book object
     const book = {
       title: bookTitle,
       author: bookAuthor,
       description: bookSnippet, // Use the bookSnippet here
-      book_image: bookCover
+      book_image: bookCover,
+      category: bookCategory
     };
 
     let myBookshelf = JSON.parse(localStorage.getItem('myBookshelf')) || [];

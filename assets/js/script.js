@@ -24,10 +24,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
       button.addEventListener('click', () => {
         // Store the book data in the local storage
         let myBookshelf = JSON.parse(localStorage.getItem('myBookshelf')) || [];
+        
+        let book = books[index];
+        book.rating = document.querySelector(`.book${index + 1}-rating`).value; // store the rating along with the book
+
         myBookshelf.push(books[index]);
         localStorage.setItem('myBookshelf', JSON.stringify(myBookshelf));
 
-        // Add the book to the 'My Bookshelf' section
+        // Add the book to the 'My Bookshelf' section\
         document.getElementById(`book${myBookshelf.length}-title`).textContent = books[index].title;
         document.getElementById(`book${myBookshelf.length}-author`).textContent = books[index].author;
         document.getElementById(`book${myBookshelf.length}-description`).textContent = books[index].description;
@@ -67,6 +71,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     });
 
+    for (let i = 1; i <= 3; i++) {
+      document.querySelector(`.book${i}-rating`).addEventListener('change', function() {
+        let myBookshelf = JSON.parse(localStorage.getItem('myBookshelf')) || [];
+        if (myBookshelf[i-1]) {
+          myBookshelf[i-1].rating = this.value;
+          localStorage.setItem('myBookshelf', JSON.stringify(myBookshelf));
+          location.reload();
+        }
+      });
+    }
+
     // Populate the 'My Bookshelf' section from the local storage
     let myBookshelf = JSON.parse(localStorage.getItem('myBookshelf')) || [];
     for(let i = 0; i < myBookshelf.length; i++) {
@@ -75,6 +90,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       document.getElementById(`book${i+1}-author`).textContent = book.author;
       document.getElementById(`book${i+1}-description`).textContent = book.description;
       document.getElementById(`book${i+1}-cover`).src = book.book_image;
+      document.querySelector(`.book${i+1}-rating`).value = book.rating || ''; // populate the rating from local storage
     }
   });
 
@@ -116,27 +132,54 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   });
 
+  function truncate(str, maxLength) {
+    return str.length > maxLength ? str.slice(0, maxLength) + "..." : str;
+  }
 
-  window.onload = function() {
-    for (let i = 1; i <= 3; i++) {
-        let bookRating = localStorage.getItem(`book${i}-rating`);
-        
-        if (bookRating !== null) {
-            document.querySelector(`.book${i}-rating`).value = bookRating;
+
+  let myBookshelf = JSON.parse(localStorage.getItem('myBookshelf')) || [];
+
+  // Find the highest rated book
+  let highestRatedBook = myBookshelf.reduce((max, book) => max.rating > book.rating ? max : book, myBookshelf[0]);
+
+  // Fetch the category of the highest rated book, if any
+  let category = highestRatedBook ? highestRatedBook.category : "";
+
+  // Check if the highest rated book exists and has a category
+  if (highestRatedBook && category) {
+    // Google Books API does not allow direct search by category. Instead, you can search by subject
+    category = category.replace(/ /g, "+");
+
+    // Fetch books from Google Books API based on the subject (category)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:${category}`)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.items);
+
+        // Assume we have the response data from Google Books API
+        let booksData = data.items;
+
+        // For each book card, get the corresponding book data and update the HTML
+        for (let i = 0; i < 3; i++) {
+          // Get the book data
+          let bookData = booksData[i].volumeInfo;
+
+          // Get the DOM elements for the book card
+          let coverElement = document.getElementById(`recbook${i+1}-cover`);
+          let titleElement = document.getElementById(`recbook${i+1}-title`);
+          let authorElement = document.getElementById(`recbook${i+1}-author`);
+          let descriptionElement = document.getElementById(`recbook${i+1}-description`);
+
+          // Update the DOM elements with the book data
+          coverElement.src = bookData.imageLinks ? bookData.imageLinks.thumbnail : ""; // Some books might not have a thumbnail
+          titleElement.textContent = bookData.title;
+          authorElement.textContent = bookData.authors ? bookData.authors.join(", ") : ""; // There might be more than one author
+          descriptionElement.textContent = truncate(bookData.description, 100);
         }
-
-        document.querySelector(`.book${i}-rating`).addEventListener('change', function() {
-            localStorage.setItem(`book${i}-rating`, this.value);
-        });
-    }
-
-    document.querySelectorAll('.remove-button').forEach((button, index) => {
-        button.addEventListener('click', function() {
-            this.parentNode.style.display = 'none';
-            localStorage.removeItem(`book${index + 1}-rating`);
-        });
-    });
-}
-
+      })
+      .catch(error => console.log('Error:', error));
+  } else {
+    console.log("No books in the bookshelf, no category found for the highest rated book, or no books have been rated");
+  }
 
 });
