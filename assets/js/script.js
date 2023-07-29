@@ -133,8 +133,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
   function truncate(str, maxLength) {
-    return str.length > maxLength ? str.slice(0, maxLength) + "..." : str;
-  }
+    if (str) { // check if str is not undefined or null or empty string
+        return str.length > maxLength ? str.slice(0, maxLength) + "..." : str;
+    } else {
+        return ""; // return empty string if str is undefined or null or empty string
+    }
+}
 
 
   let myBookshelf = JSON.parse(localStorage.getItem('myBookshelf')) || [];
@@ -174,7 +178,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           coverElement.src = bookData.imageLinks ? bookData.imageLinks.thumbnail : ""; // Some books might not have a thumbnail
           titleElement.textContent = bookData.title;
           authorElement.textContent = bookData.authors ? bookData.authors.join(", ") : ""; // There might be more than one author
-          descriptionElement.textContent = truncate(bookData.description, 100);
+          descriptionElement.textContent = truncate(bookData.description, 150);
         }
       })
       .catch(error => console.log('Error:', error));

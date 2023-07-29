@@ -17,6 +17,15 @@
     object-fit: contain;
 }
 
+.big-container {
+    background: linear-gradient(306deg, rgba(121,187,40,1) 0%, rgba(6,108,55,1) 100%);
+}
+
+#book-title {
+    color: white;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 * {

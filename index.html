@@ -22,14 +22,35 @@
             </div>
         </div>
 
+        <div class="flex items-center space-x-4">
+            <div class="hidden-in-small-screen flex-nav space-x-4">
+                <a href="best-sellers.html" class="text-gray-500 hover:text-blue-500">Top Sellers</a>
+                <a href="saved-books.html" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
+                <a href="" class="text-gray-500 hover:text-blue-500">Your Recommendations</a>
+            </div>
 
-        <div class="flex-nav space-x-4">
-            <a href="best-sellers.html" class="text-gray-500 hover:text-blue-500">Top Sellers</a>
-            <a href="saved-books.html" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
-            <a href="" class="text-gray-500 hover:text-blue-500">Your Recommendations</a>
+            <div class="shown-in-large-screen">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-400 hover:text-blue-500 hover:border-blue-500">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                </button>
+            </div>
         </div>
     </nav>
 
+    <div class="shown-in-large-screen px-6 py-2 bg-white shadow hidden text-right" id="dropdown-nav-content">
+        <a href="best-sellers.html" class="text-gray-500 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium">Top Sellers</a>
+        <a href="saved-books.html" class="text-gray-500 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium">My Bookshelf</a>
+        <a href="" class="text-gray-500 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium">Your Recommendations</a>
+    </div>
+
+    <script>
+        var navToggle = document.getElementById("nav-toggle");
+        var dropdownNavContent = document.getElementById("dropdown-nav-content");
+
+        navToggle.addEventListener('click', function() {
+            dropdownNavContent.classList.toggle('hidden');
+        });
+    </script>
 <!--my bookshelf-->
 <div class="bg-gray-200 home-section">
     <h2 class="text-2xl font-bold p-4 bg-gray-200">
@@ -174,7 +195,7 @@
                     <p class="text-sm text-gray-600" id="recbook1-author"></p>
                 </div>
             </div>
-            <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded">Add to Bookshelf</button>
+            <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded add-button">Add to Bookshelf</button>
         </div>
         <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
@@ -188,7 +209,7 @@
                     <p class="text-sm text-gray-600" id="recbook2-author"></p>
                 </div>
             </div>
-            <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded">Add to Bookshelf</button>
+            <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded add-button">Add to Bookshelf</button>
         </div>
         <div class="bg-white p-4 rounded shadow flex flex-col container">
             <div class="flex">
@@ -202,7 +223,7 @@
                     <p class="text-sm text-gray-600" id="recbook3-author"></p>
                 </div>
             </div>
-            <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded">Add to Bookshelf</button>
+            <button class="mt-auto px-4 py-2 bg-green-500 text-white rounded add-button">Add to Bookshelf</button>
         </div>
     </div>
 </div>

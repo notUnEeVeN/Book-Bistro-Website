@@ -63,8 +63,11 @@
   
     .flex {
       height: 80%; /* Adjust this value as necessary */
-      margin-bottom: auto; /* Pushes the button to the bottom of the div */
     }
+
+    .shown-in-large-screen {
+      display: none;
+  }
   }
   
   @media (max-width: 767px) { /* Mobile styles */
@@ -78,5 +81,16 @@
       height: auto;
     }
 
+    .remove-button {
+      margin-top: 10px;
+    }
+
+    .add-button {
+      margin-top: 10px;
+    }
+
+    .hidden-in-small-screen {
+      display: none;
   }
+}
   
