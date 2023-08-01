@@ -1,33 +1,85 @@
 .button-container {
-    display: flex;
+  display: flex;
 }
 
 .btb-btn {
-    text-align: center;
-    width: 180px;
-  }
+  text-align: center;
+  width: 180px;
+}
 
 .logo:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #book-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .big-container {
-    background: linear-gradient(306deg, rgba(121,187,40,1) 0%, rgba(6,108,55,1) 100%);
+  background: linear-gradient(
+    306deg,
+    rgba(121, 187, 40, 1) 0%,
+    rgba(6, 108, 55, 1) 100%
+  );
 }
 
 #book-title {
-    color: white;
+  color: white;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 * {
-    font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+@media (min-width: 768px) {
+  /* Desktop and tablet styles */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .grid > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .flex {
+    height: 80%; /* Adjust this value as necessary */
+  }
+
+  .shown-in-large-screen {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile styles */
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .grid > div {
+    height: auto;
+  }
+
+  .remove-button {
+    margin-top: 10px;
+  }
+
+  .add-button {
+    margin-top: 10px;
+  }
+
+  .hidden-in-small-screen {
+    display: none;
+  }
 }

@@ -1,60 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Bookshelf</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <link href = './assets/css/bookshelf-style.css' rel = 'stylesheet'>
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/bookshelf-style.css" rel="stylesheet" />
+  </head>
+  <body>
     <nav class="px-6 py-2 bg-white flex justify-between items-center shadow">
-        <img class="w-1/3 md:w-1/4 lg:w-1/6 logo" src = './assets/images/logo.png' id = 'logo'>
+      <img
+        class="w-1/3 md:w-1/4 lg:w-1/6 logo"
+        src="./assets/images/logo.png"
+        id="logo"
+      />
 
-        <div class="flex-1 px-4">
-            <div class="relative">
-                <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
-                    <svg class="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
-                    </svg>
-                </span>
-                <input class="pl-10 pr-4 rounded-lg border focus:border-blue-500 outline-none searchbar" placeholder="Search...">
-            </div>
+      <div class="flex-1 px-4">
+        <div class="relative">
+          <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+            <svg
+              class="h-5 w-5 text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <input
+            class="pl-10 pr-4 rounded-lg border focus:border-blue-500 outline-none searchbar"
+            placeholder="Search..."
+          />
         </div>
+      </div>
 
-        <div class="flex space-x-4">
-            <a href="best-sellers.html" class="text-gray-500 hover:text-blue-500">Top Sellers</a>
-            <a href="saved-books.html" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
-            <a href="" class="text-gray-500 hover:text-blue-500">Your Recommendations</a>
-        </div>
+      <div class="flex space-x-4">
+        <a href="best-sellers.html" class="text-gray-500 hover:text-blue-500"
+          >Top Sellers</a
+        >
+        <a href="saved-books.html" class="text-gray-500 hover:text-blue-500"
+          >My Bookshelf</a
+        >
+        <a href="" class="text-gray-500 hover:text-blue-500"
+          >Your Recommendations</a
+        >
+      </div>
     </nav>
 
-
     <section>
-        <div>
-            <div class = 'saved-books-section w-full text-xl font-bold p-6 bg-gray-200'>
-                <h2>Saved Books 📚</h2>
-            </div>
-            
-            <div class="bookshelf-section flex justify-baseline py-4 px-4 flex-wrap" id = 'bookshelf-section'>       
-                
-            </div>
+      <div>
+        <div
+          class="saved-books-section w-full text-xl font-bold p-6 bg-gray-200"
+        >
+          <h2>Saved Books 📚</h2>
         </div>
+
+        <div
+          class="bookshelf-section flex justify-baseline py-4 px-4 flex-wrap"
+          id="bookshelf-section"
+        ></div>
+      </div>
     </section>
 
     <section>
-        <div>
-            <div class = 'saved-books-section w-full text-xl font-bold p-6 bg-gray-200'>
-                <h2>My Wishlist ✨</h2>
-            </div>
-            
-            <div class="bookshelf-section flex justify-baseline py-10 px-4 flex-wrap" id = 'wishlist'>
-
-            </div>
+      <div>
+        <div
+          class="saved-books-section w-full text-xl font-bold p-6 bg-gray-200"
+        >
+          <h2>My Wishlist ✨</h2>
         </div>
+
+        <div
+          class="bookshelf-section flex justify-baseline py-10 px-4 flex-wrap"
+          id="wishlist"
+        ></div>
+      </div>
     </section>
 
-    <script src = './assets/js/bookshelf.js'>
-    </script>
-</body>
+    <script src="./assets/js/bookshelf.js"></script>
+  </body>
 </html>

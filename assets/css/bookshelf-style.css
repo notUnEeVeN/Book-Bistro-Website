@@ -1,80 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 * {
-    font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .logo:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .bookshelf-section {
-    background: linear-gradient(306deg, rgba(121,187,40,1) 0%, rgba(6,108,55,1) 100%);
+  background: linear-gradient(
+    306deg,
+    rgba(121, 187, 40, 1) 0%,
+    rgba(6, 108, 55, 1) 100%
+  );
 }
 
 .card-img {
-    height: auto;
-    width: 40%;
+  height: auto;
+  width: 40%;
 }
 
 .book-title:hover {
-    cursor: pointer;
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .card-width {
-    width: 100%;
+  width: 100%;
 }
 
 .card-top-height {
-    height: auto;
-} 
+  height: auto;
+}
 
 .card-description {
-    height: 300px;
-    width: 100%;
+  height: 300px;
+  width: 100%;
 }
 
 .remove-btn:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
 @media screen and (min-width: 700px) {
-    .card-width {
-        width: 45%;
-    }
+  .card-width {
+    width: 45%;
+  }
 
-    .card-img {
-        height: auto;
-        width: 30%;
-    }
+  .card-img {
+    height: auto;
+    width: 30%;
+  }
 
-    .card-description {
-        height: 270px;
-    }
+  .card-description {
+    height: 270px;
+  }
 }
 
 @media screen and (min-width: 850px) {
-    .card-width {
-        width: 30%;
-    }
+  .card-width {
+    width: 30%;
+  }
 
-    .card-description {
-        height: 370px;
-    }
+  .card-description {
+    height: 370px;
+  }
 }
 
-
 @media screen and (min-width: 1000px) {
-    .card-width {
-        width: 30%;
-    }
-
+  .card-width {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .card-description {
-        height: 250px;
-    }
+  .card-description {
+    height: 250px;
+  }
 }
