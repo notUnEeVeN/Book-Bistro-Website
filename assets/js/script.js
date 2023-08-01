@@ -189,6 +189,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // Check if the highest rated book exists and has a category
   if (highestRatedBook && category) {
+    // Google Books API does not allow direct search by category. Instead, you can search by subject
     category = category.replace(/ /g, "+");
 
     // Fetch books from Google Books API based on the subject (category)
@@ -196,9 +197,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data.items);
+
         let booksData = data.items;
 
-        // For each book card, get the corresponding book data and update the HTML
         for (let i = 0; i < 3; i++) {
           let bookData = booksData[i].volumeInfo;
 
@@ -208,13 +209,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
           let descriptionElement = document.getElementById(
             `recbook${i + 1}-description`
           );
+
           coverElement.src = bookData.imageLinks
             ? bookData.imageLinks.thumbnail
-            : ""; // Some books might not have a thumbnail
+            : "";
           titleElement.textContent = bookData.title;
           authorElement.textContent = bookData.authors
             ? bookData.authors.join(", ")
-            : ""; // There might be more than one author
+            : "";
           descriptionElement.textContent = truncate(bookData.description, 150);
         }
       })

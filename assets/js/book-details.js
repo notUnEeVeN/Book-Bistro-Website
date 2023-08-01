@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     bookTitle
   )}`;
 
-  // Variable to store the text snippet
   let bookSnippet;
 
   fetch(apiURL)
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(data);
       if (data.items && data.items.length > 0) {
         const book = data.items[0].volumeInfo;
-        bookSnippet = data.items[0].searchInfo.textSnippet; // Store the text snippet
+        bookSnippet = data.items[0].searchInfo.textSnippet;
 
         document.getElementById("book-title").innerText = book.title;
         document.getElementById("book-author").innerText =
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
           book.industryIdentifiers[0].identifier;
         document.getElementById("book-cover").src = book.imageLinks.thumbnail;
         document.getElementById("book-category").innerText =
-          book.categories.join(", "); // Add this line to display book category
+          book.categories.join(", ");
       }
     })
     .catch((error) => console.error("Error:", error));
@@ -48,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const book = {
       title: bookTitle,
       author: bookAuthor,
-      description: bookSnippet, // Use the bookSnippet here
+      description: bookSnippet,
       book_image: bookCover,
       category: bookCategory,
     };
@@ -69,22 +68,12 @@ logoEl.addEventListener("click", function () {
 const searchInput = document.querySelector(".searchbar");
 
 searchInput.addEventListener("keypress", function (event) {
-  // Check if the Enter key is pressed (key code 13)
+  // Check if the Enter key is pressed
   if (event.key === "Enter") {
-    // Get the value of the search bar input
     const searchQuery = searchInput.value;
 
-    // Construct the URL for the book-details.html page with the search query as a parameter
     const url = `book-details.html?title=${encodeURIComponent(searchQuery)}`;
 
-    // Redirect the user to the book-details.html page with the constructed URL
     window.location.href = url;
   }
-});
-
-var navToggle = document.getElementById("nav-toggle");
-var dropdownNavContent = document.getElementById("dropdown-nav-content");
-
-navToggle.addEventListener("click", function () {
-  dropdownNavContent.classList.toggle("hidden");
 });
