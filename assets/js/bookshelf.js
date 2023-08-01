@@ -107,6 +107,3 @@ searchInput.addEventListener("keypress", function (event) {
     window.location.href = url;
   }
 });
-
-
- 
