@@ -96,10 +96,6 @@
     height: 100%;
   }
 
-  .flex {
-    height: 80%; /* Adjust this value as necessary */
-  }
-
   .shown-in-large-screen {
     display: none;
   }
