@@ -24,6 +24,7 @@
 
 .card-width {
     width: 100%;
+    flex-grow: 1;
 }
 
 .card-top-height {
@@ -93,9 +94,7 @@
       height: 100%;
     }
   
-    .flex {
-      height: 80%; /* Adjust this value as necessary */
-    }
+  
 
     .shown-in-large-screen {
       display: none;
