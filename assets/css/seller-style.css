@@ -101,3 +101,50 @@ header {
     overflow-x: auto;
   }
 }
+
+ @media (min-width: 768px) { /* Desktop and tablet styles */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  
+    .grid > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+  
+    .flex {
+      height: 80%; /* Adjust this value as necessary */
+    }
+
+    .shown-in-large-screen {
+      display: none;
+  }
+  }
+  
+  @media (max-width: 767px) { /* Mobile styles */
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .grid > div {
+      height: auto;
+    }
+
+    .remove-button {
+      margin-top: 10px;
+    }
+
+    .add-button {
+      margin-top: 10px;
+    }
+
+    .hidden-in-small-screen {
+      display: none;
+  }
+}
