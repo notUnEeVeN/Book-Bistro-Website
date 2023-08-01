@@ -1,5 +1,5 @@
-const bookshelfEl = document.getElementById('bookshelf-section')
-const logoEl = document.getElementById('logo');
+const bookshelfEl = document.getElementById("bookshelf-section");
+const logoEl = document.getElementById("logo");
 let title; // Initializing variables to avoid having to re-initialize them for every iteration of later loop; not sure if this is best practice?
 let price;
 let author;
@@ -7,10 +7,9 @@ let categoryl
 let description;
 let img_url;
 let book_url;
-let myBookshelf = JSON.parse(localStorage.getItem('myBookshelf')); // Get data from local storage.
+let myBookshelf = JSON.parse(localStorage.getItem("myBookshelf")); // Get data from local storage.
 
-for (let i = 0; i < myBookshelf.length; i++) {
-    
+for (let i = 0; i < myBookshelf.length; i++) {  
     title = myBookshelf[i].title;
     price = myBookshelf[i].price;
     author = myBookshelf[i].author;
@@ -22,7 +21,6 @@ for (let i = 0; i < myBookshelf.length; i++) {
     let card = document.createElement('div');
     card.classList.add('rounded-xl', 'bg-gray-200', 'card-width', 'flex', 'flex-col', 'p-4', 'justify-evenly', 'my-4', 'mx-4');
     card.innerHTML += `<div class = 'flex w-full card-top-height'>
-        
                             <img src = '${img_url}' class = 'card-img rounded-xl m-0 rounded-xl'>               
                         <div class = 'flex flex-col pl-4 grow'>
                             <h2 class = 'font-bold text-lg'>Title</h2>
@@ -98,34 +96,27 @@ const bookTitles = document.querySelectorAll('.book-title');
     });
   });
 
-
-
-
-
 function truncateString(str, length) {
-	if (str.length > length) return str.slice(0, length) + '...';
-	return str;
-};
+  if (str.length > length) return str.slice(0, length) + "...";
+  return str;
+}
 
-logoEl.addEventListener('click', function() {
-    location.replace('index.html');
-})
+logoEl.addEventListener("click", function () {
+  location.replace("index.html");
+});
 
-const searchInput = document.querySelector('.searchbar');
+const searchInput = document.querySelector(".searchbar");
 
-  searchInput.addEventListener('keypress', function(event) {
-    // Check if the Enter key is pressed (key code 13)
-    if (event.key === 'Enter') {
-      // Get the value of the search bar input
-      const searchQuery = searchInput.value;
+searchInput.addEventListener("keypress", function (event) {
+  // Check if the Enter key is pressed (key code 13)
+  if (event.key === "Enter") {
+    // Get the value of the search bar input
+    const searchQuery = searchInput.value;
 
-      // Construct the URL for the book-details.html page with the search query as a parameter
-      const url = `book-details.html?title=${encodeURIComponent(searchQuery)}`;
+    // Construct the URL for the book-details.html page with the search query as a parameter
+    const url = `book-details.html?title=${encodeURIComponent(searchQuery)}`;
 
-      // Redirect the user to the book-details.html page with the constructed URL
-      window.location.href = url;
-    }
-  });
-
-
- 
+    // Redirect the user to the book-details.html page with the constructed URL
+    window.location.href = url;
+  }
+});
