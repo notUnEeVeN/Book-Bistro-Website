@@ -18,16 +18,41 @@
                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                 </svg>
             </span>
-            <input class="pl-10 pr-4 rounded-lg border focus:border-blue-500 outline-none searchbar" placeholder="Search...">
+            <input class="pl-10 pr-4 w-full rounded-lg border focus:border-blue-500 outline-none searchbar" placeholder="Search...">
         </div>
     </div>
 
-    <div class="flex space-x-4">
-        <a href="" class="text-gray-500 hover:text-blue-500">Top Sellers</a>
-        <a href="saved-books.html" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
-        <a href="" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
+    <div class="flex items-center space-x-4">
+        <div class="hidden-in-small-screen flex-nav space-x-4">
+            <a href="best-sellers.html" class="text-gray-500 hover:text-blue-500">Top Sellers</a>
+            <a href="saved-books.html" class="text-gray-500 hover:text-blue-500">My Bookshelf</a>
+            <a href="" class="text-gray-500 hover:text-blue-500">Your Recommendations</a>
+        </div>
+
+        <div class="shown-in-large-screen">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-400 hover:text-blue-500 hover:border-blue-500">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
+        </div>
     </div>
-</nav>
+  </nav>
+
+  <div class="shown-in-large-screen px-6 py-2 bg-white shadow hidden text-right" id="dropdown-nav-content">
+    <a href="best-sellers.html" class="text-gray-500 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium">Top Sellers</a>
+    <a href="saved-books.html" class="text-gray-500 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium">My Bookshelf</a>
+    <a href="" class="text-gray-500 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium">Your Recommendations</a>
+  </div>
+
+  <script>
+    var navToggle = document.getElementById("nav-toggle");
+    var dropdownNavContent = document.getElementById("dropdown-nav-content");
+
+    navToggle.addEventListener('click', function() {
+        dropdownNavContent.classList.toggle('hidden');
+    });
+</script>
+
+
   <div class="p-6 bg-gray-200 big-container">
     <div class="title-container">
       <h2 class="text-2xl font-bold mb-4" id="book-title">Book Title</h2>
