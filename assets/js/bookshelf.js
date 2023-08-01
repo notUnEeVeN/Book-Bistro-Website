@@ -102,3 +102,6 @@ const searchInput = document.querySelector('.searchbar');
       window.location.href = url;
     }
   });
+
+
+ 
