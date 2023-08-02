@@ -39,7 +39,7 @@ if (highestRatedBook && category) {
         title = bookData.title;
         author = bookData.authors ? bookData.authors.join(", ") : "";
         description = bookData.description;
-        description = truncateString(description, 400); // Truncating description and adding ellipses after if it exceeds a certain length to ensure that cards don't get too big.
+        description = truncateString(description, 300); // Truncating description and adding ellipses after if it exceeds a certain length to ensure that cards don't get too big.
         img_url = bookData.imageLinks ? bookData.imageLinks.thumbnail : "";
         book_url = bookData.infoLink;
 
@@ -53,7 +53,8 @@ if (highestRatedBook && category) {
           "p-4",
           "justify-evenly",
           "my-4",
-          "mx-4"
+          "mx-4",
+          "card-min-width"
         );
         card.innerHTML += `<div class = 'flex w-full card-top-height'>
                           <img src = '${img_url}' class = 'card-img rounded-xl m-0 rounded-xl'>               

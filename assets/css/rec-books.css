@@ -17,6 +17,10 @@
   );
 }
 
+.card-min-width {
+  min-width: 260px;
+}
+
 .card-img {
   height: auto;
   width: 40%;
@@ -80,13 +84,13 @@
   }
 
   .card-description {
-    height: 270px;
+    height: 180px;
   }
 }
 
 @media screen and (min-width: 850px) {
   .card-description {
-    height: 370px;
+    height: 250px;
   }
 }
 
