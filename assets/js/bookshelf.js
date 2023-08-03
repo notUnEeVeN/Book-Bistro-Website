@@ -82,16 +82,6 @@ const bookTitles = document.querySelectorAll('.book-title');
   
       // Get the book title from the text content of the clicked element
       const bookTitle = this.textContent;
-      console.log(bookTitle);
-  
-      const parentDiv = this.closest('div');
-    
-      // Get the author from the sibling <p> element of the book title
-      const author = parentDiv.querySelector('.author').textContent;
-
-      const pagegenerate = bookTitle + author;
-  
-      // Generate the link
       window.location.href = `book-details.html?title=${encodeURIComponent(pagegenerate)}`;
     });
   });

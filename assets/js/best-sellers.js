@@ -38,10 +38,31 @@ function displayCategoryBooks(listName, books) {
     bookElement.innerHTML = `<div class = 'book-info'>
                 <img class = 'card-img' src="${bookImage}" alt="${title}">
                 <p class="book-title">${title}</p>
-                <p class="book-author">${author}</p>
+                <p class="author">${author}</p>
                 </div>
         `;
     bookshelf.appendChild(bookElement);
+    bookElement
+          .querySelector(".book-title")
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Get the book title from the text content of the clicked element
+            const bookTitle = this.textContent;
+            console.log(bookTitle);
+
+            const parentDiv = this.closest("div");
+
+            // Get the author from the sibling <p> element of the book title
+            const author = parentDiv.querySelector(".author").textContent;
+
+            const pagegenerate = bookTitle + author;
+
+            // Generate the link
+            window.location.href = `book-details.html?title=${encodeURIComponent(
+              pagegenerate
+            )}`;
+          });
   });
 }
 function fetchBestSellers() {
@@ -95,3 +116,4 @@ bookTitles.forEach((bookTitle) => {
     )}`;
   });
 });
+
